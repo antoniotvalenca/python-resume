@@ -1,0 +1,66 @@
+TERMINAL
+-> Para abrir o python
+    -> python3
+-> Para fechar
+    -> exit()
+-> Para rodar um script pronto no terminal
+    -> ir para o local do arquivo
+    -> python3 ./arquivo.py
+
+_______________________________________________________________________________________________________________________________________
+
+LISTAS (ARRAYS)
+
+cores = ["azul", "vermelho", "amarelo"]
+
+_______________________________________________________________________________________________________________________________________
+
+TUPLAS
+-> são a mesma coisa que arrays, mas imutaveis (como se fossem arrays constantes), e elas sao instanciadas com () ao inves de []
+
+cores = ("azul", "amarelo", "roxo") # tambem podemos colocá-las sem os (), so com as virgulas
+
+_______________________________________________________________________________________________________________________________________
+
+DICIONÁRIO
+-> é uma estrutura que possui chave e valor
+-> ele nao tem ordem, entao
+
+dicionario = {
+    "chave": "valor",
+    "chave2": "valor2",
+    "cor": "roxo"
+}
+
+print(dicionario["chave"]) // vai printar "valor"
+print(dicionario["cor"]) // vai printar roxo
+
+-> podemos, também, criar um dicionário dentro de uma chave, ao invés de apenas passar um valor bruto
+
+AGENDA = {
+    "antonio": {
+        "numero": "9999-3333",
+        "endereco": "rua tal"
+    },
+
+    "brunna": {
+        "numero": "9343-3439",
+        endereco": "rua tal"
+    }
+}
+
+print(AGENDA["antonio"]) // vai printar todas as infos de antonio
+print(AGENDA["brunna"][numero]) // vai printar o numero de brunna
+_______________________________________________________________________________________________________________________________________
+
+CONJUNTOS
+-> declaramos com chaves {}
+-> são valores guardados que ficam desordenados (não possuem indices)
+-> nao permite valores iguais
+
+conjunto_cores = {"vermelho", "verde", "azul"}
+
+for cor in conjunto_cores:
+    print(cor) // cada vez que vc rodar o programa vai ser printado de um jeito diferente
+
+_______________________________________________________________________________________________________________________________________

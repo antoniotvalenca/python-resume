@@ -1,0 +1,62 @@
+STRING
+
+# -> comentario
+print("qualquer coisa") -> printa algo na tela
+print(f'minha idade é {idade} e meu nome é {nome}') -> template string
+
+print(nome[2]) // printa o 3o caracter
+print(nome[:3]) // printa a partir do 4o caracter
+_______________________________________________________________________________________________________________________________________
+
+DIVERSOS
+type(variavel) -> vai printar o datatype da variavel
+    -> str, int, bool, float
+
+_______________________________________________________________________________________________________________________________________
+
+NUMBER
+int(x) -> transforma uma string em numero (uma string que seja um numero)
+float(x) -> ''
+
+_______________________________________________________________________________________________________________________________________
+
+COMPARISON
+== -> checa se 2 valores sao iguais
+!= -> checa se 2 valores sao dif
+> // < // >= // <= -> maior/menor que // maior igual/menor igual que
+
+and -> mesmo que &&
+or -> mesmo que ||
+
+_______________________________________________________________________________________________________________________________________
+
+ARRAYS
+
+for item in array:  -> itera em cada indice da lista
+
+array.append("cavalo") -> adiciona no final da lista "array"
+array.remove("cachorro") -> remove o item com valor "cachorro" da lista "array"
+
+print(array[0:3]) -> printa do indice 0 ate o 3
+print(array[1:]) -> printa todos os indices a partir do 1
+print(array[-1]) -> pega o ultimo objeto da lista (se fosse -2, seria penultimo, etc..)
+
+_______________________________________________________________________________________________________________________________________
+
+TUPLAS
+
+for pessoa in pessoas:
+    print(pessoas[pessoa]) -> vai iterar em cada chave e printa-las
+
+_______________________________________________________________________________________________________________________________________
+
+DICIONARIO
+
+agenda.pop("antonio") // vai tirar tudo de info que tem dentro dessa chave
+_______________________________________________________________________________________________________________________________________
+
+
+CONJUNTOS
+
+conjunto_cores.add("branco") -> adiciona um novo elemento no conjunto
+conjunto_cores.remove("branco") -> remove um elemento existente c esse valor
