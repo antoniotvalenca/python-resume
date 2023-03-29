@@ -1,0 +1,42 @@
+ABRINDO UM ARQUIVO NUM CODIGO PYTHON
+
+arquivo = open('emails.txt')
+    -> guardando dentro da variavel arquivo
+    -> se voce so passar o nome so vai buscar na pasta que está o codigo python
+    -> para pegar arquivos de pastar superiores ou inferiores tem que passar o caminho completo
+
+print(arquivo.read())
+    -> vai logar o que tiver dentro desse arquivo
+
+print(arquivo.readlines())
+    -> colocada cada linha dentro de um array como se cada linha fosse um elemento
+    -> nesse caso é bom para arquivos em que cada linha é um item (tipo um email)
+
+arquivo.close()
+    -> toda vez que voce abre um arquivo, ele tem que ser fechado
+
+_______________________________________________________________________________________________________________________________________
+
+JEITO ALTERNATIVO (COM WITH - AS)
+
+-> neste jeito, voce coloca tudo o que quer mexer/usar no arquivo que está sendo aberto e, quando acabar, é so sair do escopo
+-> ou seja, nao precisa dar um arquivo.close()
+
+with open('arquivo.txt') as arquivo:
+    print(arquivo.readlines())
+
+_______________________________________________________________________________________________________________________________________
+
+ESCREVENDO EM ARQUIVOS
+
+-> quando abrimos um arquivo através do
+    -> open('arquivo.txt')
+-> estamos implicitamente dizendo que, após o parametro arquivo.txt, existe um 'r' de read (é o parametro default)
+-> mas existem situacoes que vamos querer executar/escrever o arquivo e, portanto, precisamos passar o parametro
+-> o 'w'(write) sobescreve o arquivo. ou seja, se já tiver um texto lá e usarmos a função de escrever, o que tiver lá será apagado
+-> o 'a'(append) permite que voce escreva um arquivo sem sobescreve-lo, ou seja, apenas adicionando texto
+
+-> arquivo = open('arquivo.txt' , 'w')
+-> arquivo = open('arquivo.txt', 'a')
+-> arquivo.write('Antonio') // vai escrever (a) ou sobescrever (w)
+
