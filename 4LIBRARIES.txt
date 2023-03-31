@@ -1,0 +1,21 @@
+RANDOM LIBRARY
+-> uma biblioteca usada, principalmente, em jogos
+-> é built-in
+-> import random
+
+-> random.random() // gera um numero de 0 a 1 aleatorio
+-> random.randint(1,6) // gera um numero aleatorio entre 1 a 6 (mas sempre int)
+-> random.choice(["a", "b", "c"]) // escolhe um valor aleatoriamente dentro de uma lista (seja string, numerico, etc)
+
+_______________________________________________________________________________________________________________________________________
+
+PICKLES LIBRARY
+-> transforma qualquer objeto em um valor binário (bom para transferir para arquivos com permissão "wb", ou seja, de write e binary)
+
+-> pickle.dump(objetoQueSeraTranformadoEmBinario, arquivoQueSeraTransferido)
+    -> transforma o objeto em binário e joga dentro de um arquivo
+    -> obs: ele tem que ser usado dentro de um open()
+
+-> x = pickle.load(arquivoQueSeraRetransformadoEmPython)
+    -> carrega um arquivo binário e salva dentro de uma variavel "x" como objeto
+    -> precisa estar dentro de um open()

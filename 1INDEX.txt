@@ -106,3 +106,37 @@ def soma(first_num, sec_num):
     result = first_num + sec_num
 
     return result
+
+_______________________________________________________________________________________________________________________________________
+
+TRY/EXCEPT
+
+-> o except é o mesmo que catch, é onde cai o erro
+
+ def divisao(a, b)
+    try:
+        print(a/b)
+    except:
+        print("divisão inválida") // tratando genericamente
+ou::
+
+ def divisao(a, b)
+    try:
+        print(a/b)
+    except Exception as error:
+        print(error) // vai logar o erro exato
+
+ou::
+
+ def divisao(a, b)
+    try:
+        print(a/b)
+    
+    except ValueError as error:                         // vai tratar o erro especifico
+        print("input invalido digite apenas numeros")
+    except ZeroDivisionError as error:
+        print("nao se divide nenhum numero por zero")
+    expect Exception as error:                          // lida com os demais erros
+        print("algum erro ocorreu")
+    finally:                                            // o que acontece dps de tratar o erro
+        print("fim do programa")

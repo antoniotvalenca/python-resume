@@ -1,0 +1,60 @@
+CLASSE
+
+-> a classe descreve um determinado objeto (é como se fosse um modelo/receita pra criação daquele objeto)
+-> nomeamos as classes com letra maiuscula
+-> criamos métodos (funçoes derivadas da classe) e atributos (variaveis) que moldam a estrutura da classe
+-> o método construtor das classes é o "__init__". é atraves dele (pelos parametros) que passamos valorse de atributos referentes a classe
+    -> o __init__ possui um parametro default ("self") que é ignorado na hora de declarar a construçao da classe
+    -> isto é, caso o __init__ tenha 2 parametros fora o obrigatorio (self), apenas passamos os valores desses 2 parametros na declaraçao da construçao do objeto
+    -> o uso do self é apenas dentro do codigo do método, se auto-instanciando
+-> também teremos o método "__str__" que indica a maneira como aquele objeto se comportará qunado ele for printado
+    -> ele também é acompanhado do parametro self
+    -> em outra interpretaçao (levando em conta que nao precisa ser necessariamente um print no console), ele vai ser uma representaçao em string daquela classe
+-> existem também os valores padrões, que são parametros passados no metodo construtor que todos que estiverem naquela classe vão ter
+    -> passamos o parametro ja atribuindo seu valor (ex:  def __init__(self, especie='cachorro'))
+    -> mas, caso passemos o seu valor no parametro na hora da construção, esse valor será alterado pro novo valor do parametro
+-> importando classes:
+    -> from pokemon import *
+    -> from pokemon import Pokemon, PokemonEletrico
+
+
+EX:
+-> class Pokemon:
+    def __init__(self, tipo, especie, canFight = True, nome): // o self é um parametro default e na hora de usar o metodo ignoramos ele e apenas passamos os parametros de tipo e especie
+        self.tipo = tipo
+        self.especie = especie
+        self.canFight = canFight
+        
+        if nome:
+            self.nome = nome
+        else:
+            self.nome = especie
+
+    def __str__(self):
+        return self.tipo, self.especie // agora quando formos printar qualquer variavel construida por essa classe, ela vai printar o tipo e a especie
+
+    def atacar(self, outroPokemon):
+        print(f'{self} atacou {outroPokemon}')
+
+
+    meu_pokemon = Pokemon("fogo", "charmander")
+    outro_pokemon = Pokemon("agua", "squirtle", nome = "aguado")
+
+_______________________________________________________________________________________________________________________________________
+
+HERANÇA
+-> As vezes precisamos criar classes filhas, derivadas de classes maiores.
+-> A tendência é essas classes filhas herdarem características gerais da classe mãe, mas tendo suas próprias especificidades que demais classes filhas não possuem
+-> Essas classes filhas, apesar de herdarem as coisas da classe mãe, elas sao capazes de sobescrever. exemplo: escrever um método na classe filha que ja existe na classe
+mãe, mas com as alterações convenientes para ela. Inclusive, isso se chama polimorfismo
+
+-> DECLARAÇÃO:
+
+class PokemonEletrico(Pokemon):
+     tipo = eletrico // nesse momento já posso ir na classe superior (a Pokemon) e tirar a opcao de colocar o seu tipo
+
+    def atacar(self, pokemon)
+        print(f'{self} deu um choque do trovão em {pokemon}')
+
+class Pikachu (PokemonEletrico):
+    especie = Pikachu
