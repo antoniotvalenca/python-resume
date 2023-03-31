@@ -1,0 +1,26 @@
+VIRTUALENV (VIRTUAL ENVIRONMENT)
+
+-> é um ambiente virtual para um projeto
+    -> nesse contexto, vai ta instalado no virtualenv o python e todas as bibliotecas externas
+
+-> pip install virtualenv //instala na maquina
+-> virtualenv meu_primeiro_venv
+    -> uma pasta virtualenv vai ser criada no projeto, contendo as bibliotecas que vao ser usadas no projeto (inclusive o python3)
+-> para utilizar esse ambiente virtual de bibliotecas
+    -> source meu_primeiro_venv/bin/activate (linux e mac) // agora vc está dentro do ambiente virtual do venv
+    -> meu_primeiro_venv/Scripts/activate
+-> baixando bibliotecas dentro do virtualenv
+    -> (dentro do virtualenv) pip install request
+-> para sair do virtualenv
+    -> deactivate
+
+______________________________________________________________________________________________________________________________________
+
+PASSO A PASSO
+
+0) pip install virtualenv
+1) Cria uma pasta para guardar todos os venv dos varios projetos que voce vai ter
+2) virtualenv --python=python3 venv_nomeDoProjeto
+    -> se for windows: virtualenv --python="c:...caminho ate onde o python ta instalado" venv_nomeDoProjeto
+3) source bin/activate
+    -> ativa o virtualenv

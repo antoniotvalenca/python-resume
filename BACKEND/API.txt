@@ -1,0 +1,16 @@
+API (Application programming interface)
+-> é um conjunto de regras protocolos e ferramentas que permitem que diferentes sistemas se comuniquem entre si
+-> permite que diferentes aplicativos sejam integrados e compartilhem informações
+-> muito utilizadas em serviços web
+
+-> REST API :
+    -> Comumente utilizada nas APIs web.
+    -> usam o protocolo HTTP para solicitar e enviar dados em formato JSON ou XML (normalmente json)
+
+-> outras APIS:
+    -> SOAP ( entre aplicativos ) // XML
+    -> IoT ( entre aplicativos e dispositivos conectados à internet, como sensores, câmeras, etc)
+    -> ...
+
+______________________________________________________________________________________________________________________________________
+

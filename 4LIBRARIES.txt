@@ -1,3 +1,15 @@
+PYPI
+-> pypi.org
+-> um acervo de bibliotecas externas (não built-in) de python, criada pelos próprios usuários de python
+-> para instalar no linux:
+    -> apt-get install python3-pip
+
+-> para instalar bibliotecas externas:
+    -> pip/pip3 (gerenciador de pacotes do python)
+    -> pip freeze (checando quais ja estao nistalaldos)
+    -> pip install request (baixa essa biblioteca)
+______________________________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________________________
 RANDOM LIBRARY
 -> uma biblioteca usada, principalmente, em jogos
 -> é built-in
@@ -11,6 +23,8 @@ ________________________________________________________________________________
 
 PICKLES LIBRARY
 -> transforma qualquer objeto em um valor binário (bom para transferir para arquivos com permissão "wb", ou seja, de write e binary)
+-> é built-in
+-> import pickles
 
 -> pickle.dump(objetoQueSeraTranformadoEmBinario, arquivoQueSeraTransferido)
     -> transforma o objeto em binário e joga dentro de um arquivo
@@ -19,3 +33,13 @@ PICKLES LIBRARY
 -> x = pickle.load(arquivoQueSeraRetransformadoEmPython)
     -> carrega um arquivo binário e salva dentro de uma variavel "x" como objeto
     -> precisa estar dentro de um open()
+
+_______________________________________________________________________________________________________________________________________
+
+DATETIME LIBRARY
+-> built-in
+-> import datetime
+
+-> datetime.datetime.now() // retorna o ano, mes, dia, hora, minuto, segundo, milesimo
+
+_______________________________________________________________________________________________________________________________________

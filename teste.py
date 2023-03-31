@@ -1,3 +1,6 @@
+import datetime
+
+
 class Pokemon:
     def __init__(self, nome, tipo):
         self.nome = nome
@@ -9,4 +12,4 @@ class Pokemon:
 
 antonioPokemon = Pokemon("charmander", "fogo")
 
-print(antonioPokemon)
+print(datetime.datetime.now())
