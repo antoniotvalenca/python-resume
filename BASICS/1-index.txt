@@ -140,3 +140,24 @@ ou::
         print("algum erro ocorreu")
     finally:                                            // o que acontece dps de tratar o erro
         print("fim do programa")
+
+______________________________________________________________________________________________________________________________________
+
+__name__ == __main__
+
+->  Quando executamos diretamente o código python de um arquivo (isto é, quando não estamos executando ele através de uma importação),
+o python nomeia todo o bloco de código que será executado como __main__
+-> Por isso, podemos usar a linha de código
+    if (__name__ == "__main__"):
+        *codigo*
+para executar um código que será apenas executável quando aquele arquivo está sendo rodado diretamente.
+
+EX:
+
+print("teste")
+
+if __name__ == "__main__":
+    print("teste2")
+
+-> Nesse código, caso executemos ele diretamente no arquivo, ira printar ambos "teste" e "teste2". Mas se for executado externamente,
+irá printar apenas o "teste" (é desse modo que funciona a lógica do name-main)

@@ -11,7 +11,7 @@ ________________________________________________________________________________
 DIVERSOS
 type(variavel) -> vai printar o datatype da variavel
     -> str, int, bool, float
-
+exit(0) -> encerra o programa bem sucedidamente
 _______________________________________________________________________________________________________________________________________
 
 NUMBER
@@ -20,6 +20,7 @@ float(x) -> ''
 range(6) -> gera uma lista de 0 a 5 
 range(2, 40) -> gera uma lista de 2 a 38
 range(0, 50, 2) -> gera uma lista de 0 a 48 indo de 2 em 2
+len(x) -> diz a quantidade de elementos que tem ali (ex: em uma lista, ou quantas letras tem em uma string especifica)
 _______________________________________________________________________________________________________________________________________
 
 COMPARISON

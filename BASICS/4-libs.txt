@@ -8,7 +8,42 @@ PYPI
     -> pip/pip3 (gerenciador de pacotes do python)
     -> pip freeze (checando quais ja estao nistalaldos)
     -> pip install request (baixa essa biblioteca)
+
+-> ORGANIZAÇÃO DE IMPORTS:
+    -> 1) imports de built-in
+    -> 2) imports de libs externas
+    -> 3) imports de arquivos
+
 ______________________________________________________________________________________________________________________________________
+
+SYS LIBRARY
+-> biblioteca que acessa informações e dados internos do sistema utilizado
+-> import sys
+
+sys.argv -> mostra um array com todos os argumentos que um usuário passou no console/terminal
+         -> sendo que o primeiro elemento [indice 0] é sempre o nome do arquivo
+______________________________________________________________________________________________________________________________________
+
+JSON LIBRARY
+-> usada para manipular respostas em json
+-> é built-in
+-> import json
+
+json.loads(url de um json)
+
+ex:
+(API DE PAISES)
+
+    import json
+    import requests // para requisicoes
+
+    url = "restcountries.eu/rest/v2/all"
+
+    response = requests.get(url)
+
+    countries = json.loads(response.text) // agora virou uma lista
+    print(countries[0]['name']) // agora posso lidar com essa api como se fosse um objeto
+
 _______________________________________________________________________________________________________________________________________
 RANDOM LIBRARY
 -> uma biblioteca usada, principalmente, em jogos

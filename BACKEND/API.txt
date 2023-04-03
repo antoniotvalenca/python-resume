@@ -12,5 +12,5 @@ API (Application programming interface)
     -> IoT ( entre aplicativos e dispositivos conectados à internet, como sensores, câmeras, etc)
     -> ...
 
-______________________________________________________________________________________________________________________________________
+
 

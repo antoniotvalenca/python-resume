@@ -1,0 +1,48 @@
+REQUISIÇÕES WEB
+-> para fazer requisições web com python, precisamos baixar a lib "requests"
+    -> pip install requests 
+    -> import requests (importando no arquivo)
+
+______________________________________________________________________________________________________________________________________
+
+MÉTODOS DE REQUISIÇÃO
+
+-> O protocolo HTTP (hypertext transfer protocol) é resopnsável por estabelecer a comunicação entre cliente-servidor, permitindo que
+estes troquem dados entre sí através do sistema de SOLICITAÇÃO (de dados) e RESPOSTA (envio de dados)
+-> MÉTODOS DE REQUISIÇÃO (SOLICITAÇÃO DE DADOS)
+    -> GET (O cliente pede dados ao servidor)
+    -> POST (O cliente envia uma solicitação para enviar dados ao servidor)
+    -> PUT (O cliente envia uma solicitação de atualização de dados já existentes no servidor/base de dados)
+    -> DELETE (O cliente envia uma solicitação de exclusão de dados para o servidor)
+
+obs diferença entre HTTP e TCP/IP
+-> HTTP é um protocolo de aplicação, executado sob o tcp/ip, que transfere e renderiza dados existentes
+-> TCP/IP é um protocolo de comunicação, que conecta dispositivos e fornece a infraestrutura para a transferência de dados
+
+
+CONTEXTOS DE USO:
+
+1) o método get(url), usado avulso dentro de um código, irá absorver o conteudo do url colocado dentro dele
+2) o método get, usado na criaçao de um route, determina o que será renderizado naquela rota
+______________________________________________________________________________________________________________________________________
+
+JSON PARSING
+-> muito usado na comunicação web com APIs
+-> import json (importando a lib built-in que lida com jsons)
+
+-> ex:
+    import json
+    import requests
+
+    url = "http://www.exemplo.com/json/api/countries"
+    response = requests.get(url)
+
+    print(response.text)                                // para printar em texto (texto puro)
+    countries = json.loads(response.text)               // agora passa a lidar como se fosse um objeto e é possivel acessar seus atributos colocando a chave correspondente
+______________________________________________________________________________________________________________________________________
+
+MÉTODOS
+
+resposta = requests.get(url)
+resposta.status_code -> mostra o status de sucesso daquela requisicao (ex: se for 200 deu certo)
+resposta.text -> mostra o conteúdo de texto da url
