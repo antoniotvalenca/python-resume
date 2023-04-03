@@ -45,6 +45,7 @@ ex:
     print(countries[0]['name']) // agora posso lidar com essa api como se fosse um objeto
 
 _______________________________________________________________________________________________________________________________________
+
 RANDOM LIBRARY
 -> uma biblioteca usada, principalmente, em jogos
 -> é built-in
@@ -78,3 +79,27 @@ DATETIME LIBRARY
 -> datetime.datetime.now() // retorna o ano, mes, dia, hora, minuto, segundo, milesimo
 
 _______________________________________________________________________________________________________________________________________
+
+BS4 LIBRARY (PARA HTML)
+-> Lib de python usada para extrair dados de html e xml
+-> através dela, é possível analisar/manipular/encontrar elementos específicos, obter atributos de tags, etc
+-> pip install bs4
+
+soup = BeautifulSoup(requestResponseFromUrl, 'html-parser') -> absorve um html de um url
+soup.prettify -> retorna todo o html
+soup.title -> retorna o titulo do html, incluindo a tag <title></title>
+soup.title.get_text() -> retorna apenas o titulo
+soup.find_all('a') -> acha todas as tags do tipo <a>
+soup.find('div', class_="card") -> acha todas as divs com classe card
+
+ex:
+    from bs4 import BeautifulSoup
+    import requests
+
+    url = "sitealeatorio.com"
+
+    response = requests.get(url)
+    soup = BeautifulSoup(response, 'html.parser')
+
+    print(soup.prettify) // printa todo o html
+    print(soup.title) // imprime o titulo do html

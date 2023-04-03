@@ -1,1 +1,5 @@
 1) virtualenv --python=python3 nome_do_projeto
+2) pip install requests bs4
+
+3)
+    import requests
