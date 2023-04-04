@@ -103,3 +103,48 @@ ex:
 
     print(soup.prettify) // printa todo o html
     print(soup.title) // imprime o titulo do html
+
+
+______________________________________________________________________________________________________________________________________
+
+TIME LIBRARY
+-> relacionado a controle de tempo (sleep etc)
+-> built-in
+-> import TIME
+
+time.sleep(3) -> para por 3 segundos até o próximo comando
+
+______________________________________________________________________________________________________________________________________
+
+THREADING LIBRARY
+-> fornece um conjunto de ferramentas para criar/gerenciar threads
+    -> threads: unidades independentes de execução que permitem que um programa execute varias tarefas simultaneamente
+-> ou seja, usando a "threading" da pra executar partes específicas do código simultaneamente, aumentando a eficiência de acordo com o tempo
+-> import threading
+
+-> CÓDIGO BASICO
+    -> thread1 = threading.Thread(target=random_function_that_does_what_you_want, args=("O argumento da random_function"))
+        -> obs: ao dar a funçao target, voce nao mostra os parenteses, o argumento é passado no parametro seguinte (em args)
+    -> thread1.start() // starta
+    -> thread1.join() // para
+-> No código abaixo, as duas funções serão executadas simultaneamente (num código aleatorio, seria primeiro uma e depois a outra)
+
+        import threading
+
+        def thread_function(msg): // vai printar uma mensagem x 5x
+            for i in range(5):
+                print(msg)
+
+        thread1 = threading.Thread(target=thread_function, args=("Thread 1",))
+        thread2 = threading.Thread(target=thread_function, args=("Thread 2",))
+
+        thread1.start() // starta a thread
+        thread2.start()
+
+        thread1.join() // acaba a thread
+        thread2.join()
+
+        print("Fim do programa")
+
+OBS***: scrapy.org/ -> ensina a fazer web crowling/spiders
+OBS2***: regex101.com/ -> ajuda a filtrar conteúdos específicos que voce esta em busca

@@ -40,3 +40,4 @@ ESCREVENDO EM ARQUIVOS
 -> arquivo = open('arquivo.txt', 'a')
 -> arquivo.write('Antonio') // vai escrever (a) ou sobescrever (w)
 
+______________________________________________________________________________________________________________________________________

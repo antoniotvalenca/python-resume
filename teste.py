@@ -1,15 +1,20 @@
-import datetime
+import threading
+import time
 
 
-class Pokemon:
-    def __init__(self, nome, tipo):
-        self.nome = nome
-        self.tipo = tipo
-
-    def __str__(self):
-        return f'Nome: {self.nome} // Tipo: {self.tipo}'
+def thread_function(msg):
+    for i in range(5):
+        time.sleep(2)
+        print(msg)
 
 
-antonioPokemon = Pokemon("charmander", "fogo")
+thread1 = threading.Thread(target=thread_function, args=("Thread 1",))
+thread2 = threading.Thread(target=thread_function, args=("Thread 2",))
 
-print(datetime.datetime.now())
+thread1.start()
+thread2.start()
+
+thread1.join()
+thread2.join()
+
+print("Fim do programa")
